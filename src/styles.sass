@@ -1,0 +1,2533 @@
+@import src/sass/libs
+@import src/sass/variables
+@import src/sass/components/buttons
+@import src/sass/components/input
+@import src/sass/components/card
+@import src/sass/components/basic
+//@import src/sass/components/popup
+@import src/sass/components/link
+@import src/app/cabinet/shared/sections/brief-section/brief-section.component
+
+.top__line
+	padding: 30px 0
+	border-radius: 0
+	border: 1px solid #f1f1f1
+
+	&-inside
+		display: flex
+		justify-content: space-between
+		width: 100%
+		align-items: center
+
+	&-brand
+		max-width: 190px
+		width: 100%
+		display: block
+
+		&:hover
+			text-decoration: none
+
+			&::before
+				display: none
+
+		img
+			width: 100%
+			height: auto
+
+	&-center
+		text-align: center
+
+	&-right
+		display: flex
+		align-items: center
+		justify-content: flex-end
+
+	&-nav
+		padding-right: 20px
+
+	&-nav, &-cabinet
+		display: flex
+		align-items: center
+
+		ul
+			display: flex
+
+			li
+				display: block
+				margin: 0 20px
+				position: relative
+
+				&::before
+					content: ''
+					width: 3px
+					height: 3px
+					border-radius: 10em
+					background-color: #BDC8D3
+					position: absolute
+					right: -23px
+					top: 50%
+					margin-top: 1px
+					transform: translateY(-50%)
+
+				&:first-child
+					margin-left: 0
+
+				&:last-child
+					&::before
+						display: none
+						margin-right: 0
+
+				a
+					color: #27272E
+					display: block
+
+					&:hover, &.active
+						color: $accent
+
+						&::before
+							width: 100%
+
+	&-cabinet
+		ul
+			display: flex
+
+.auth-wrapper
+	max-width: 505px
+	margin: 100px auto auto auto
+	width: 100%
+	padding: 50px 40px 20px 40px
+	position: relative
+	border-radius: 16px
+	box-shadow: 0 0 1px rgba(12, 26, 75, 0.1), 0 4px 20px -2px rgba(50, 50, 71, 0.08)
+	background-color: #fff
+
+	&__headline
+		text-align: center
+		margin-bottom: 40px
+
+		h2
+			font-size: 32px
+			color: #27272E
+			font-weight: normal
+			margin-bottom: 12px
+
+	form
+		max-width: 100%
+		width: 100%
+
+		.input-group
+			display: block
+
+			.input-default
+				width: 100%
+				display: block
+				margin-bottom: 15px
+
+.input-info
+	font-size: 13px
+	line-height: 1.2
+
+.form-action
+	padding-bottom: 40px
+	text-align: center
+
+	button
+		display: block
+		width: 100%
+
+.form-bottom
+	padding-top: 40px
+	border-top: 1px solid #E0E1E2
+	text-align: center
+
+	ul
+		display: flex
+		justify-content: center
+		align-items: center
+
+		li
+			display: block
+			position: relative
+			padding: 0 30px
+
+			a
+				display: block
+
+			&:first-child
+				padding-left: 0
+
+			&:last-child
+				padding-right: 0
+
+				&::before
+					display: none
+
+			&::before
+				content: ''
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				width: 1px
+				height: 100%
+				background-color: #E0E1E2
+
+	a
+		color: $accent
+		display: inline-block
+
+.auth-wrapper__content
+	text-align: center
+
+	.form-bottom
+		padding-top: 20px
+
+	.form-action
+		padding-bottom: 20px
+
+		a
+			display: block
+			width: 100%
+
+	.email-icon
+		max-width: 63px
+		width: 100%
+		display: block
+		margin: 0 auto
+
+		img
+			width: 100%
+			height: 100%
+
+	p
+		margin-top: 25px
+		margin-bottom: 40px
+
+		strong
+			color: $accent
+
+.error-page
+	position: relative
+	width: 100%
+	height: 80vh
+	display: flex
+	justify-content: center
+	align-items: center
+
+	.error-text
+		text-align: center
+
+		strong
+			font-size: 20px
+			background: linear-gradient(45.31deg, #DC32C8 14.63%, #DA32C8 14.99%, #A82BD7 26.7%, #8327E2 36.93%, #6C24E9 45.19%, #6423EB 50.42%, #2769F7 72.19%, #0096FF 85.61%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			display: block
+
+		h2
+			font-size: 160px
+			font-weight: bold
+			display: block
+			margin-bottom: 10px
+			background: linear-gradient(45.31deg, #DC32C8 14.63%, #DA32C8 14.99%, #A82BD7 26.7%, #8327E2 36.93%, #6C24E9 45.19%, #6423EB 50.42%, #2769F7 72.19%, #0096FF 85.61%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			line-height: 1
+
+		p
+			font-size: 25px
+			color: #27272E
+
+		.btn-wrapper
+			margin-top: 50px
+
+// layout header
+.layout
+	&__inside
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		align-items: center
+		margin: 1.5625em 0
+
+	&__top
+		&-right
+			display: flex
+			align-items: center
+
+		&-brand
+			max-width: 14.25em
+			width: 100%
+			display: block
+
+			img
+				width: 100%
+				height: auto
+
+		&-date
+			font-size: 1.125em
+			color: $blackTextColor
+
+			.bi
+				color: #92A6B9
+				margin-right: 0.9375em
+
+		&-notification
+			padding: 0 2em
+			margin: 0 3.125em
+			border-left: 0.1em solid rgba(#BDBDBD, .6)
+			border-right: 0.1em solid rgba(#BDBDBD, .6)
+			display: flex
+			justify-content: center
+			align-items: center
+			line-height: 100%
+
+			button
+				background-color: transparent
+				outline: none
+				color: #92A6B9
+				margin: 0 0.25em
+				padding: 0 0.5em
+				display: inline-block
+				font-size: 1.25em
+				transition: $trans
+
+				&:hover
+					color: $accent
+
+		&-profile
+			font-size: 1.125em
+			cursor: pointer
+			color: $blackTextColor
+			position: relative
+			padding-right: 2.25em
+			display: flex
+			align-items: center
+
+			&::before
+				content: ''
+				position: absolute
+				right: 0
+				top: 35%
+				width: 0.5em
+				height: 0.5em
+				border-bottom: 0.15em solid #2D264B
+				border-right: 0.15em solid #2D264B
+				border-bottom-right-radius: 0.2em
+				transform: rotate(45deg)
+
+			&-img
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 2.22em
+				height: 2.22em
+				border-radius: 50%
+				overflow: hidden
+				margin-right: 1.25em
+
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+
+	@media (max-width: 1023px)
+		&__inside
+			position: relative
+
+			&::before
+				content: '☰'
+				position: absolute
+				right: 0.5em
+				top: 50%
+				transform: translateY(-50%)
+				font-size: 2em
+		&__top
+			&-right
+				display: none
+	@media (max-width: 578px)
+		&__inside
+			margin: 0 0 1.5625em
+			box-shadow: none
+			padding: 1.25em 0
+			background-color: #fff0
+
+			&:hover
+				box-shadow: none
+
+			&::after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: -1em
+				right: -1em
+				height: 0.0625em
+				background: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 29.4%, rgba(224, 225, 226, 0.876953) 68.09%, rgba(224, 225, 226, 0.15625) 99.04%)
+				display: block
+		&__top
+			&-brand
+				max-width: 11em
+
+.deposit
+	padding: 1.875em
+	margin-bottom: 1.5625em
+
+	&-info
+		font-size: 0.8125em
+		color: #7A90A6
+		display: inline-block
+
+	&-balance
+		font-size: 1em
+		color: $blackTextColor
+		display: inline-block
+
+		font-family: 'Sora', sans-serif
+
+	&-title
+		margin-bottom: 0.9375em
+
+		span
+			display: block
+			text-transform: uppercase
+			font-size: 0.8125em
+			font-weight: 500
+			margin-bottom: 0.3125em
+
+		strong
+			display: block
+			color: $accent
+			font-size: 1.875em
+			font-weight: normal
+
+	&-list
+
+		&__items
+			margin-bottom: 0.625em
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+.deposit-action
+	margin-top: 1.875em
+	display: flex
+	align-items: center
+
+	li
+		display: block
+		margin: 0 0.3em
+
+		.btn
+			padding-top: 0.625em
+			padding-bottom: 0.625em
+			display: block
+
+		&:first-child
+			margin-right: 1.25em
+
+.main-nav
+	padding: 0 1.875em
+
+	&__ul
+		display: block
+		padding-bottom: 1.25em
+		margin-bottom: 0.625em
+		padding-top: 1.25em
+		width: 100%
+
+		li
+			display: block
+
+			a
+				color: $blackTextColor
+				font-size: 1.125em
+				position: relative
+				transition: $trans
+				font-family: 'Sora', sans-serif
+				padding: 0.625em 0.3125em
+
+				&:hover, &.active
+					color: $accent
+
+					.bi
+						color: $accent
+
+					&::before
+						height: 100%
+
+				&::before
+					content: ''
+					position: absolute
+					left: -0.9375em
+					top: 50%
+					transform: translateY(-50%)
+					width: 0.3125em
+					height: 0
+					transition: $trans
+					background-color: $accent
+					border-radius: 0.3125em
+					overflow: hidden
+
+				.bi
+					margin-right: 0.9375em
+					color: #92A6B9
+					transition: $trans
+
+.main-nav__ul-small
+	padding: 1.875em 0
+
+	li
+		display: block
+		margin-bottom: 0.9375em
+		padding: 0 0.9375em
+
+		a
+			color: $textGray
+
+			&.active
+				color: $accent
+
+				&::before
+					width: 100%
+
+.main-banner
+	margin-top: 1.5625em
+	display: flex
+	width: 100%
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding: 1.875em 0.9375em
+	overflow: hidden
+
+	.banner-img
+		max-width: 13.375em
+		width: 100%
+
+		img
+			width: 100%
+			height: 100%
+
+	.banner-title
+		font-size: 1.4375em
+		text-align: center
+		color: $blackTextColor
+		text-transform: uppercase
+		margin-top: 1.25em
+
+.security-wrapper
+	margin-top: 35px
+
+.security-block
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 1.875em
+	margin-bottom: 1.5625em
+
+	h4
+		font-size: 1.375em
+		margin-bottom: 2.1875em
+		font-weight: 400
+		color: $blackTextColor
+
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__text
+		strong, span
+			display: block
+
+		span
+			font-size: 0.9375em
+
+	strong
+		font-size: 1.25em
+		font-weight: 400
+		color: #425466
+
+.footer-left
+
+	&__logo
+		max-width: 12.375em
+		width: 100%
+		display: block
+
+		img
+			width: 100%
+			height: auto
+
+	&__copy
+		font-size: 1em
+		margin-top: 3.125em
+
+.footer-center
+	display: flex
+	justify-content: space-between
+
+	&__menu
+		h4
+			font-size: 1.5em
+			color: $grayColor
+			margin-bottom: 2.5em
+			font-weight: 300
+
+		ul
+			display: block
+
+			li
+				display: block
+
+				a
+					color: $blackTextColor
+					display: inline-block
+					margin-bottom: 0.9375em
+
+.footer-right
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+
+	&__social
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 50px
+		flex-wrap: wrap
+
+		li
+			display: block
+			margin: 0 25px 20px 25px
+
+			a
+				width: 50px
+				height: 50px
+				background-color: #fff
+				box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.04)
+				border-radius: 10em
+				display: flex
+				justify-content: center
+				margin: 0 auto
+				align-items: center
+				transition: $trans
+
+				&:hover
+					background-color: $accent
+					color: #fff
+
+					&::before
+						display: none
+
+	&__year
+		font-size: 16px
+		text-align: center
+
+// Main #HomePage
+.home-wrapper
+	background-color: #fff
+
+.main-header
+	min-height: 100vh
+	height: 920px
+	background-color: #fff
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: center
+	overflow: hidden
+
+	&::before
+		content: ''
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		width: 100%
+		height: 100%
+		background-image: url('./assets/images/header-bg-img.png')
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: 100%
+		z-index: 1
+
+	&::after
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 35%
+		height: 50vh
+		background: #F2F8FB
+		z-index: 0
+
+	&__left
+		padding-left: 50px
+		z-index: 1
+		position: relative
+
+	&__title
+		font-size: 80px
+		margin-bottom: 60px
+		color: $blackTextColor
+		line-height: .9
+		display: block
+		font-weight: 300
+
+		strong
+			font-weight: 400
+
+	&__desc
+		font-size: 23px
+		font-weight: 200
+		line-height: 1.2
+
+.partners-section
+	position: relative
+	top: 0
+	transform: translateY(-50%)
+	z-index: 5
+
+	h4
+		font-size: 32px
+		padding-left: 50px
+		font-weight: 300
+		color: #fff
+		margin-bottom: 30px
+
+	.partners-wrapper
+		display: flex
+		min-height: 130px
+		align-items: center
+		padding: 0 85px
+		justify-content: space-around
+
+.about-section
+	position: relative
+
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 38%
+		height: 200%
+		background: #F2F8FB
+		z-index: 0
+
+	&__title
+		font-size: 80px
+		color: $blackTextColor
+		margin-bottom: 30px
+		font-weight: 400
+
+	&__description
+		font-size: 21px
+		color: #425466
+		font-weight: 400
+		line-height: 1.2
+
+	&__slogan
+		display: block
+		margin-top: 60px
+		font-size: 18px
+		color: $textColor
+
+	&__right
+		padding-left: 40px
+
+	&__item
+		margin-top: 40px
+
+		strong
+			font-size: 60px
+			font-weight: 400
+			color: $blackTextColor
+			display: block
+			line-height: 1.2
+
+		span
+			font-size: 22px
+			color: $grayColor
+			display: block
+
+	&__contacts
+		position: relative
+		margin-top: 60px
+
+		h4
+			font-size: 28px
+			color: $blackTextColor
+			display: block
+			margin-bottom: 30px
+			font-weight: 400
+
+		.contacts__items
+			position: relative
+			padding-left: 25px
+
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				width: 5px
+				height: 100%
+				background-color: #4065FF
+				border-radius: 5px
+				overflow: hidden
+
+			a
+				margin-bottom: 5px
+
+			&-first
+				margin-bottom: 15px
+				display: inline-block
+
+				a
+					display: block
+
+.solutions-section
+	min-height: 100%
+	width: 100%
+	height: 100%
+	background: linear-gradient(45.31deg, #DC32C8 14.63%, #DA32C8 14.99%, #A82BD7 26.7%, #8327E2 36.93%, #6C24E9 45.19%, #6423EB 50.42%, #2769F7 72.19%, #0096FF 85.61%)
+	position: static
+	padding: 80px 0
+	color: #fff
+	overflow: hidden
+
+	.main-headline
+		color: #fff
+		margin-bottom: 60px
+
+	.solutions-iphone
+		position: relative
+		text-align: center
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 0 auto
+
+		&__mockup
+			position: relative
+			max-width: 395px
+			width: 100%
+			height: 808px
+			z-index: 1
+			overflow: hidden
+
+			.mockup
+				width: 100%
+				z-index: 1
+				height: auto
+				position: relative
+
+			.screen
+				position: absolute
+				left: 50%
+				top: 18px
+				transform: translateX(-50%)
+				width: 100%
+				height: 94.5%
+				object-fit: contain
+				z-index: 0
+
+.solutions-text
+	position: relative
+
+	&__items
+		display: flex
+		align-items: center
+		justify-content: center
+		border-bottom: 1px solid rgba(#E0E1E2, .2)
+		padding: 40px 0
+		transition: $trans
+
+		&:nth-of-type(5)
+			border-bottom: none
+
+		&:hover
+			transform: scale(1.1)
+			opacity: 1
+
+			.solutions-text__title
+				border-color: #5AACFF
+
+		&.active
+			transform: scale(1.1)
+			opacity: 1
+
+			.solutions-text__title
+				border-color: #5AACFF
+
+	&__title
+		font-size: 35px
+		color: #fff
+		font-weight: normal
+		flex: 0 0 50%
+		max-width: 50%
+		border-left: 5px solid transparent
+		padding-left: 20px
+
+	&__description
+		font-size: 14px
+		color: #fff
+		flex: 0 0 50%
+		max-width: 50%
+
+	&__link
+		margin-top: 15px
+		color: #82C0FF
+
+//Review
+
+//&::before
+//	content: ''
+//	position: absolute
+//	width: 100%
+//	height: 100%
+//	left: 50%
+//	top: -4%
+//	z-index: 10
+//	transform: translateX(-50%)
+//	background-image: url("./assets/images/adv-bg.svg")
+//	background-position: center center
+//	background-repeat: no-repeat
+
+.preipo-section
+	background-color: #F2F8FB
+
+	h2
+		margin-bottom: 100px
+
+	.preipo-item
+		display: block
+		padding: 0
+		overflow: hidden
+		position: relative
+
+		&__info
+			position: absolute
+			top: 0
+			transition: all .4s ease-out
+			left: 0
+			width: 100%
+			opacity: 0
+			visibility: hidden
+			height: 100%
+			background-color: #fff
+			z-index: 1
+
+		.preipo-text
+			padding: 30px 30px 30px 80px
+			border-bottom: 1px solid #CECFD7
+			//transition-delay: 1s
+			//opacity: 0
+
+			.title
+				font-size: 26px
+				color: $blackTextColor
+				display: block
+				margin-bottom: 10px
+
+			.desc
+				font-size: 16px
+				color: $blackTextColor
+				line-height: 1.2
+
+		&__adv
+			margin-top: 30px
+			padding: 0 30px 30px 30px
+			border-bottom: 1px solid #CECFD7
+
+			li
+				display: flex
+				font-size: 16px
+				color: $blackTextColor
+				margin-bottom: 15px
+				justify-content: center
+
+				.left
+					max-width: 70%
+					flex: 0 0 70%
+
+				.right
+					max-width: 30%
+					flex: 0 0 30%
+
+		&__bottom
+			padding: 0 30px
+			margin-top: 30px
+			display: flex !important
+			justify-content: space-between
+
+			span
+				display: block
+				color: $blackTextColor
+				font-size: 18px
+
+		&:hover
+
+			.preipo-item__logo
+				top: 33px
+
+			.preipo-item__info
+				opacity: 1
+				height: 100%
+				visibility: visible
+
+			&::before
+				display: none
+
+		span
+			display: block
+
+		&__img
+			max-width: 100%
+			width: 100%
+			height: 268px
+			position: relative
+			overflow: hidden
+
+			img
+				width: 100%
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+
+		&__logo
+			position: absolute
+			top: 50%
+			max-width: 80px
+			z-index: 2
+			width: 100%
+			transition: $trans
+			padding-left: 20px
+			padding-right: 20px
+
+			img
+				width: 100%
+				height: auto
+
+		&__title
+			font-size: 30px
+			padding-left: 20px
+			padding-right: 20px
+			color: $blackTextColor
+			padding-top: 40px
+			margin-bottom: 15px
+
+		&__description
+			padding-left: 20px
+			padding-right: 20px
+			font-size: 16px
+			color: #425466
+			font-weight: 300
+			line-height: 1.2
+
+			margin-bottom: 40px
+
+		&__tag
+			display: flex
+			padding-left: 20px
+			padding-right: 20px
+			font-weight: 400
+			padding-bottom: 20px
+
+			li
+				font-size: 12px
+				margin-right: 10px
+				display: block
+				padding: 4px 10px
+				border-radius: 5px
+				background-color: $gray
+
+.s-certificate
+	background-image: url("./assets/images/vector.svg")
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	background-color: #fff
+	padding: 80px 0
+
+	.main-headline
+		margin-bottom: 30px
+
+	.certificate-img
+		max-width: 829px
+		width: 100%
+		display: block
+
+		img
+			width: 100%
+			height: auto
+
+	.certificate__text
+		&-title
+			font-size: 25px
+			color: $blackTextColor
+			margin-bottom: 30px
+			line-height: 1.2
+			display: block
+
+		&-desc
+			margin-bottom: 20px
+			border-left: 2px solid #4065FF
+			padding-left: 15px
+			font-size: 18px
+			color: $blackTextColor
+
+		&-link
+			margin-top: 20px
+			padding-top: 20px
+
+			a
+				color: $accent
+				font-size: 18px
+
+.s-teams
+	padding: 80px 0 40px 0
+	border-top: 1px solid $gray
+	position: relative
+
+	&::before
+		content: ''
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		background-image: url('./assets/images/Subtract.png')
+		background-position: center center
+		background-size: 100%
+		background-repeat: no-repeat
+		top: -39px
+		width: 183px
+		height: 76px
+
+	.headline-desc
+		padding-left: 30px
+		border-left: 2px solid #D6E1EC
+		font-size: 22px
+		color: $blackTextColor
+
+	.teams-wrapper
+		margin-top: 120px
+
+	.teams-card
+		border-right: 1px solid $gray
+		padding: 0 20px
+
+		&.last-item
+			border-right: 0
+
+		&__img
+			max-width: 160px
+			width: 160px
+			height: 160px
+			border-radius: 10em
+			overflow: hidden
+			margin: 0 auto
+			position: relative
+
+			img
+				width: 100%
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+				object-fit: cover
+
+		&__name
+			font-size: 28px
+			display: block
+			text-align: center
+			margin-top: 20px
+			margin-bottom: 8px
+			color: $blackTextColor
+			line-height: 1.2
+
+		&__position
+			text-align: center
+			display: block
+			color: $textColor
+			text-transform: uppercase
+
+.top__line-lang
+	margin-left: 25px
+
+	.lang-wrapper
+		position: relative
+
+		.lang-list
+			position: absolute
+			top: 50px
+			left: 50%
+			transform: translateX(-50%)
+			width: 200px
+			z-index: 2
+			border: 1px solid #E0E2E7
+			border-radius: 8px
+			background-color: #fff
+			padding: 6px 12px
+
+			button
+				display: flex
+				align-items: center
+				background-color: transparent
+				width: 100%
+				padding: 8px
+
+				&:hover
+					background-color: #E0E2E7
+
+		.lang-selected
+			color: $blackTextColor
+			text-transform: uppercase
+			margin-top: 2px
+			cursor: pointer
+			padding: 8px
+			border-radius: 8px
+			border: 1px solid #E0E2E7
+			font-size: 16px
+			display: flex
+			align-items: center
+
+			.bi
+				margin-left: 5px
+
+.lang-icon
+	width: 25px
+	height: 25px
+	margin-right: 8px
+	overflow: hidden
+	display: inline-block
+	background-position: center center
+	background-size: 100%
+
+	&.ru
+		background-image: url('./assets/images/lang/ru.svg')
+
+	&.en
+		background-image: url('./assets/images/lang/us.svg')
+
+.to-fixed
+	position: fixed
+	width: 100%
+	height: 1200px
+	left: 0
+	top: 0
+	z-index: 100
+
+.invest-idea
+	padding: 0
+	margin: 30px 0
+
+	&__head
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 30px 35px
+
+		.head__left
+			font-size: 18px
+			color: $blackTextColor
+			display: flex
+			font-weight: 300
+
+			.icon-flame
+				width: 28px
+				height: 28px
+				background-image: url('./assets/images/icons/flame.png')
+				background-position: center center
+				background-repeat: no-repeat
+				display: block
+				margin-right: 10px
+
+		.head__right
+			ul
+				display: flex
+				align-items: center
+
+				li
+					font-weight: 500
+					font-size: 16px
+					display: block
+
+					&:first-child
+						color: #00B929
+						padding-right: 20px
+						margin-right: 20px
+						border-right: 1px solid #E0E1E2
+
+					&:last-child
+						color: #92A6B9
+						padding: 6px 18px
+						border: 1px solid #E0E2E7
+						border-radius: 20px
+
+						span
+							color: $primary
+
+	&__content
+		border-bottom: 1px solid #E0E2E7
+		padding: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__img
+		flex: 0 0 340px
+		max-width: 340px
+		width: 100%
+		margin: 0 auto
+
+		img
+			width: 100%
+			height: auto
+
+	&__text
+		flex: 1 0 0
+		max-width: 100%
+
+		h4
+			color: $blackTextColor
+			font-size: 32px
+			display: block
+			margin-bottom: 15px
+			font-weight: 400
+
+		span
+			font-size: 13px
+			font-weight: 500
+			margin-bottom: 20px
+			text-transform: uppercase
+			display: block
+
+	&__tag
+		display: flex
+
+		li
+			padding: 5px 12px
+			background-color: #EEF3F5
+			border-radius: 5px
+			display: block
+			font-size: 13px
+			margin-right: 10px
+
+	&__bottom
+		padding: 20px
+		display: flex
+
+	&__progress
+		flex: 0 0 33.33%
+		max-width: 33.33%
+		width: 100%
+
+	&__action
+		flex: 0 0 33.33%
+		max-width: 33.33%
+		display: flex
+		justify-content: flex-end
+		align-items: center
+
+		.btn
+			margin-left: 15px
+
+	&__menu
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+
+		.last
+			border-right: 0
+
+		a
+			padding: 18px 40px
+			display: block
+			width: 100%
+			flex: 1 0 0
+			border-right: 1px solid #E4E8EA
+			text-align: center
+			font-size: 18px
+
+			&.active
+				color: $primary
+
+				&::before
+					width: 100%
+
+			.bi
+				margin-right: 5px
+				vertical-align: middle
+
+			&:hover
+				color: $primary
+
+	&__info
+		display: flex
+		flex: 0 0 33.33%
+		max-width: 33.33%
+		justify-content: center
+
+		.info
+			margin: 0 25px
+			border-right: 1px solid #EEF3F5
+			padding-right: 25px
+
+			&:nth-of-type(2)
+				padding-right: 0
+				margin: 0
+				border: 0
+
+			span, strong
+				display: block
+
+			span
+				font-size: 13px
+				color: #7A90A6
+				text-transform: uppercase
+
+			strong
+				color: $blackTextColor
+				font-size: 24px
+				font-family: 'Sora', sans-serif
+
+.progress-headline
+	margin-bottom: 10px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	.progress-title
+		font-size: 13px
+		color: #7A90A6
+		text-transform: uppercase
+
+	.progress-percent
+		color: $primary
+		font-size: 13px
+		font-weight: 500
+
+.progress-line
+	position: relative
+	width: 100%
+	height: 16px
+	border: 1px solid #DBDFEA
+	border-radius: 4px
+	overflow: hidden
+
+	.inner-line
+		height: 100%
+		background-color: $primary
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+
+//
+
+.found-headline
+	&__right
+		display: flex
+
+		.btn
+			margin-left: 0.9375em
+			padding: 0.75em 2.5em
+
+	@media (max-width: 578px)
+		flex-wrap: wrap
+		h2
+			margin-bottom: 0.5em
+		&__right
+			width: 100%
+
+			.btn
+				margin-left: 0
+				width: 100%
+
+.found-case
+	margin-top: 1.875em
+
+	.card-head
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 1.25em
+
+		.card-head
+			font-size: 1.375em
+			color: $blackTextColor
+			font-weight: normal
+
+	.card-body
+		margin-top: 2.5em
+		padding: 2.1875em 1.875em
+
+	&__wrapper
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__item
+		border: 0.0625em solid #D6E1EC
+		border-radius: 0.9375em
+		padding: 1.25em 1.875em
+		flex: 0 0 50%
+		max-width: 50%
+		width: 100%
+		margin: 0 1.5625em
+
+		&:nth-of-type(1)
+			margin-left: 0
+
+		&:nth-of-type(2)
+			margin-right: 0
+
+		h5
+			font-size: 1.125em
+			color: #425466
+			font-weight: normal
+			margin-bottom: 1.875em
+
+.found-column
+	display: flex
+	flex-wrap: wrap
+	margin: -2.5em -3.075em 0
+
+	&__items
+		display: flex
+		border-top: 0.0625em solid #EAECEF
+		padding: 0.875em 0
+
+		&-wrapper
+			padding: 0 1.25em
+			width: 25%
+
+		.left, .right
+			flex: 0 0 50%
+			max-width: 50%
+			width: 100%
+
+		.left
+			.title
+				font-size: 1.375em
+				color: $blackTextColor
+				display: block
+				line-height: 1.1
+				margin-bottom: 0.3125em
+
+			.label
+				color: #92A6B9
+				font-size: 0.8125em
+				line-height: 1
+				display: block
+
+		.right
+			text-align: right
+
+			.percent
+				font-size: 1.25em
+				color: #7F94A9
+
+.fund-info
+	&__wrapper
+		padding-right: 1.25em
+
+	&__headline
+		font-size: 1.625em
+		color: $blackTextColor
+		font-weight: normal
+		padding: 1.346em 0
+
+	&__quote
+		padding: 0.125em 1.25em
+		font-size: 1.1875em
+		color: $blackTextColor
+		line-height: 130%
+		font-weight: normal
+		margin-bottom: 1.5625em
+		position: relative
+
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			width: 0.3125em
+			height: 100%
+			border-radius: 0.3125em
+			background-color: $accent
+
+	@media (max-width: 1023px)
+		&__headline
+			display: none
+	@media (max-width: 578px)
+		&__wrapper
+			padding-right: 0
+		&__quote
+			padding: 0.125em 0 0.125em 1.25em
+			font-size: 1em
+
+.fund-grid
+	width: 100%
+
+	&__inside-wrapper
+		display: flex
+		margin: 0 -0.625em -1.25em
+
+	&__item
+		max-width: 50%
+		width: 100%
+		padding: 1.25em 0.625em
+
+	@media (max-width: 578px)
+		&__inside-wrapper
+			flex-direction: column
+		&__item
+			max-width: 100%
+			padding: 0 0.625em
+			margin-bottom: 0.625em
+
+// fund-strategy
+.fund-strategy
+	display: flex
+	margin: 0 -0.625em
+
+	&-item
+		width: 33.3%
+		padding: 0 0.625em
+
+	&-title
+		text-transform: uppercase
+		font-weight: normal
+		font-size: 1.375em
+		line-height: 1.6875em
+		letter-spacing: -0.01em
+		color: $blackTextColor
+
+	&-description
+		font-size: 1em
+		line-height: 130%
+		color: $textGray
+		margin: 0.9375em 0
+
+	&-excerption
+		font-size: 1.1875em
+		line-height: 130%
+		color: $blackTextColor
+		margin-bottom: 0
+
+// fund-portfel
+.fund-portfel
+	padding-top: 2.1875em
+
+	&__description
+		font-size: 1.1875em
+		color: $blackTextColor
+		line-height: 130%
+
+	&__note
+		font-size: 1em
+		line-height: 130%
+		margin-top: 2.1875em
+
+// fund-advantages
+.fund-advantages
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -0.625em
+
+	&__item-wrapper
+		max-width: 33.3%
+		width: 100%
+		flex: 0 0 33.3%
+		padding: 0 0.625em
+		margin-bottom: 2.1875em
+
+	&__item
+		h6
+			font-size: 1.375em
+			letter-spacing: -0.01em
+			line-height: 1.6875em
+			font-weight: normal
+			color: $blackTextColor
+
+		p
+			font-size: 1em
+			line-height: 130%
+			margin: 0.9375em 0 0
+			color: $textGray
+
+// fund-conditions
+.fund-conditions
+	&-title
+		font-weight: normal
+		font-size: 1.375em
+		line-height: 1.6875em
+		color: $blackTextColor
+
+.fund-risks
+	padding-bottom: 2.1875em
+
+	p
+		line-height: 130%
+		color: $textGray
+
+.chart
+	max-width: 80%
+	width: 100%
+	margin: 0 auto
+
+// Stats Items
+
+.found-stats
+	margin-top: 25px
+	padding: 1.875em
+
+.stats-info
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	gap: 1.75em
+
+	.stats-items
+		background-color: #fff
+		border: 1px solid #D6E1EC
+		border-radius: 15px
+		padding: 0.9375em 1.25em
+		flex: 1 1 0
+
+		&__month
+			font-size: 0.8125em
+			font-weight: 500
+			color: #7A90A6
+
+		&__flex
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 100%
+			padding: 0.3125em 0
+
+			&.border-bottom
+				border-bottom: 0.0625em solid #E0E1E2
+
+		&__ticker
+			font-size: 1.625em
+			color: #27272E
+			letter-spacing: -0.02em
+
+		&__percent
+			font-size: 1.625em
+			color: #00B929
+			letter-spacing: -0.02em
+
+			span
+				position: relative
+				padding-right: 20px
+
+				&::before
+					font-family: 'bootstrap-icons', sans-serif !important
+					position: absolute
+					right: -15px
+					top: 50%
+					transform: translateY(-50%)
+
+			.down
+				color: $red
+				position: relative
+
+				&::before
+					content: '\F128'
+
+			.up
+				color: $green
+
+				&::before
+					content: '\F148'
+
+		&__title
+			font-size: 1.25em
+			letter-spacing: -0.02em
+			color: #92A6B9
+			font-weight: 300
+			font-family: 'Sora', sans-serif
+
+		&__log
+			font-size: 1.25em
+			color: #92A6B9
+
+			span
+				position: relative
+				padding-right: 10px
+
+				&::before
+					font-family: 'bootstrap-icons', sans-serif !important
+					position: absolute
+					right: -15px
+					top: 50%
+					transform: translateY(-50%)
+
+				&.up
+					&::before
+						content: '\F145'
+
+				&.down
+					&::before
+						content: '\F124'
+
+// _fund-page END =================================================================================
+
+.stats-chart
+	margin-top: 1.875em
+
+.profile-status
+	padding: 1.875em 1.25em
+	margin-bottom: 1em
+
+	&-wrapper
+		margin: 0 -1.875em
+		display: flex
+
+	&__items
+		height: 100%
+		max-width: 100%
+		width: 100%
+		position: relative
+
+		&-wrapper
+			width: 33.3%
+			padding: 0 1.875em
+
+		&.status
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+			h4
+				font-size: 1.275em
+				font-weight: normal
+				color: $blackTextColor
+				margin-bottom: 1em
+				display: flex
+				align-items: center
+				position: relative
+
+				.status-icon
+					width: 30px
+					height: 30px
+					border-radius: 10em
+					margin-right: 0.525em
+					position: relative
+					display: block
+
+					&::before
+						position: absolute
+						left: 42%
+						top: 52%
+						transform: translate(-50%, -50%)
+						color: #fff
+						font-size: 20px
+						font-family: 'bootstrap-icons', sans-serif
+
+					&.verified
+						background-color: #39C88C
+
+						&::before
+							content: '\F26E'
+
+					&.unverified
+						background-color: #D6E1EC
+
+						&::before
+							content: '\F2EA'
+
+			p
+				font-size: 1em
+				color: #425466
+				line-height: 1.2
+				margin-bottom: 1.875em
+
+			.btn
+				display: block
+				padding-top: 0.625em
+				padding-bottom: 0.625em
+				font-size: 1.0625em
+
+.profile-page
+	margin-top: 1.6875em
+
+	.input-group
+		.btn-wrapper
+			.btn
+				font-size: 17px
+
+	&-contacts, &-personal
+		margin-top: 1.5625em
+		padding: 1.875em
+
+		.h-26
+			margin-bottom: 1.15625em
+
+	&-identification
+		display: flex
+		padding-bottom: 1.25em
+
+		&-wrapper
+			padding: 2.5em 1.875em 1.25em
+
+		&__mail
+			padding-top: 0.9375em
+
+			&-identity
+				display: block
+				font-size: 1.0625em
+				line-height: 1.3125em
+				color: #7F94A9
+				margin-top: 1em
+
+				&.verified
+					color: $green
+
+				svg
+					margin-right: 0.625em
+					margin-bottom: 0.1875em
+
+	&-together
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin: 0 -0.46875em
+
+		.text-field
+			width: 50%
+			padding: 0 0.46875em
+
+	&-radio
+		display: flex
+		margin-bottom: 1.875em
+
+	&-password
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 1.5625em
+		padding: 1.875em
+
+// _profile-page END =============================================================================
+
+.stats-head
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 30px
+	width: 100%
+
+	&__left
+		display: flex
+
+		li
+			font-size: 20px
+			color: $primary
+			display: block
+			padding: 5px 30px
+			border-left: 1px solid #E4E8EA
+			border-right: 1px solid #E4E8EA
+			cursor: pointer
+			position: relative
+
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				bottom: 0
+				width: 0
+				height: 3px
+				transition: $trans
+				background-color: $accent
+
+			&.active
+				font-weight: 500
+				color: $blackTextColor
+
+				&::before
+					width: 80%
+
+	&__right
+		display: flex
+		justify-content: flex-end
+		align-items: center
+
+		.stats__item
+			font-family: 'Sora', sans-serif
+			font-size: 18px
+			color: $blackTextColor
+			margin-left: 40px
+			font-weight: 500
+			position: relative
+
+			&.green
+				&::before
+					background-color: #00B929
+
+			&.blue
+				&::before
+					background-color: #4065FF
+
+			&::before
+				content: ''
+				position: absolute
+				left: -22px
+				top: 50%
+				transform: translateY(-60%)
+				width: 14px
+				height: 14px
+				border-radius: 10em
+
+.digital-code
+	margin: 40px 0 0 0
+
+	h4
+		font-size: 19px
+		color: $blackTextColor
+		font-weight: 500
+		text-align: center
+		margin-bottom: 25px
+
+	&__input
+		max-width: 300px
+		width: 100%
+		margin: 0 auto
+
+		code-input
+		--item-spacing: 15px
+		--item-border-radius: 8px
+		--item-height: 65px
+
+	&__message
+		text-align: center
+		margin-top: 20px
+
+		.link
+			border: transparent
+			background-color: transparent
+			font-size: 16px
+			font-weight: 500
+			color: $blue
+
+//.briefcase__wrapper
+//	margin-top: 1.875em
+
+//.briefcase__wrapper-items
+//	padding: 1.875em 1.25em
+//	width: 100%
+//	display: block
+//	transition: $trans
+
+//	&.active
+//		background-color: $accent
+//		color: #fff
+
+//		.briefcase__deposit
+//			color: #fff
+
+//.briefcase__title
+//	font-size: 0.8125em
+//	display: block
+
+//.briefcase__deposit
+//	font-size: 1.875em
+//	color: $blackTextColor
+//	transition: $trans
+
+.fund-headline__info
+	margin: 1.5625em 0
+	padding: 1.875em 1.25em
+	position: relative
+
+	&-wrapper
+		display: flex
+		align-items: center
+
+	&-columns
+		display: flex
+		width: 75%
+
+	&-column
+		position: relative
+		display: flex
+		height: 100%
+		align-self: center
+		justify-content: center
+		align-items: center
+		overflow: hidden
+
+		&-wrapper
+			padding: 0 3.125em
+
+	&-icon
+		max-width: 6.1875em
+		width: 100%
+
+		img
+			width: 100%
+			height: 100%
+
+	&-btn
+		padding: 0 1.875em 0 3.125em
+		position: relative
+		width: 25%
+
+		.btn
+			border-color: #E0E1E2
+			position: absolute
+			left: 50%
+			top: 50%
+			min-width: 14.25em
+			transform: translateY(-50%) translateX(-50%)
+
+	&-title
+		span
+			font-size: 0.8125em
+			color: #7A90A6
+			text-transform: uppercase
+
+		strong
+			font-size: 1.5em
+			font-family: 'Sora', sans-serif
+			color: $blackTextColor
+			font-weight: 400
+
+		span, strong
+			display: block
+
+	@media (max-width: 1023px)
+		padding: 1.25em 1em
+		&-wrapper
+			flex-direction: column
+		&-columns
+			flex-direction: column
+			align-items: flex-start
+			padding-left: 7.25em
+			width: 100%
+		&-column
+			justify-content: flex-start
+
+			&-wrapper
+				width: 100%
+				padding: 0 0 0.9375em 0
+
+				&:not(:first-child)
+					margin-top: 0.9375em
+
+				&::before
+					left: 0
+					top: auto
+					width: auto
+					height: 0.0625em
+
+				&:last-child
+					&::before
+						display: none
+		&-icon
+			position: absolute
+			left: 1em
+			top: 1.25em
+		&-btn
+			width: 100%
+			margin-top: 0.9375em
+			text-align: center
+
+			.btn
+				position: relative
+				left: auto
+				right: auto
+				transform: none
+
+	@media (max-width: 578px)
+		&-columns
+			padding-left: 5.25em
+		&-icon
+			max-width: 4.375em
+		&-btn
+			padding: 0
+
+			.btn
+				width: 100%
+
+.chart
+	max-width: 80%
+	width: 100%
+	margin: 0 auto
+
+.stats-chart
+	margin-top: 1.875em
+
+// Stats Items
+
+.found-stats
+	margin-top: 1.5625em
+	padding: 1.875em
+
+.stats-info
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	gap: 1.75em
+
+	.stats-items
+		background-color: #fff
+		border: 0.0625em solid #D6E1EC
+		border-radius: 0.9375em
+		padding: 0.9375em 1.25em
+		flex: 1 1 0
+
+		&__month
+			font-size: 0.8125em
+			font-weight: 500
+			color: #7A90A6
+
+		&__flex
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 100%
+			padding: 0.3125em 0
+
+			&.border-bottom
+				border-bottom: 0.0625em solid #E0E1E2
+
+		&__ticker
+			font-size: 1.625em
+			color: #27272E
+			letter-spacing: -0.02em
+
+		&__percent
+			font-size: 1.625em
+			color: #00B929
+			letter-spacing: -0.02em
+
+		&__title
+			font-size: 1.25em
+			letter-spacing: -0.02em
+			color: #92A6B9
+			font-weight: 300
+			font-family: 'Sora', sans-serif
+
+		&__log
+			font-size: 1.25em
+			color: #92A6B9
+
+.founds-info
+	justify-content: space-between
+	align-items: stretch
+	opacity: 0
+	transition: $trans
+	height: 0 !important
+	display: none
+
+	&.isActive
+		opacity: 1
+		height: 100% !important
+		display: flex
+		transition: $trans
+		margin-bottom: 1.875em
+
+	&.card
+		padding: 0 1.875em 0.9375em
+
+	.left
+		max-width: 70%
+		width: 100%
+		flex: 0 0 70%
+
+	.right
+		max-width: 30%
+		width: 100%
+		flex: 0 0 30%
+		padding-left: 1.25em
+
+		&.vert-line
+			&::before
+				right: auto
+				left: 0
+
+		.btn-wrapper
+			text-align: center
+			padding: 1.875em 0
+
+			a
+				display: block
+
+	.found-nav
+		padding: 4.625em 0.9375em 0.9375em 2.5em
+		display: block
+
+		li
+			padding: 0.9375em 0
+			display: block
+
+			a
+				color: $blackTextColor
+				font-weight: normal
+				font-size: 1.1875em
+				display: inline-block
+				position: relative
+				padding-left: 2em
+				transition: $trans
+
+				&::after
+					content: '\f27a'
+					position: absolute
+					left: -1.75em
+					font-size: 0.9375em
+					transition: $trans
+					opacity: 0
+					top: 50%
+					transform: translateY(-50%)
+					font-family: bootstrap-icons, serif !important
+
+				&:hover, &.active
+					color: $accent
+
+					&::after
+						opacity: 1
+
+					&::before
+						display: none
+
+				svg
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-35%)
+
+	@media (max-width: 1023px)
+		&.isActive
+			display: none
+
+// founds-info-mobile
+.founds-info-mobile
+	justify-content: space-between
+	align-items: stretch
+	opacity: 0
+	visibility: hidden
+	transition: $trans
+	height: 0 !important
+
+	&.isActive
+		opacity: 1
+		height: 100% !important
+		display: none
+		transition: $trans
+		margin-bottom: 1.875em
+
+	.found-nav-mobile
+		display: block
+
+		.card
+			padding: 0.9375em 0.75em 0.9375em 1em
+
+			&.isActiveMobile
+				&.card
+					padding: 0.9375em 0.75em 3.125em 1em
+
+					&::before
+						content: ""
+						position: absolute
+						right: 0
+						left: 0
+						width: auto
+						bottom: 3.125em
+						height: 0.0625em
+						background: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 29.4%, rgba(224, 225, 226, 0.876953) 68.09%, rgba(224, 225, 226, 0.15625) 99.04%)
+						display: block
+
+				.found-info-mobile__title
+					margin-bottom: 2.25em
+
+					&::before
+						content: ''
+						position: absolute
+						left: 50%
+						bottom: 1.4375em
+						width: 0.5em
+						height: 0.5em
+						border-bottom: 0.1em solid $accent
+						border-right: 0.1em solid $accent
+						border-bottom-right-radius: 0.2em
+						transform: rotate(45deg)
+
+					a
+						&::before
+							content: ""
+							position: absolute
+							right: 0
+							left: 0
+							width: auto
+							bottom: -1em
+							height: 0.0625em
+							background: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 29.4%, rgba(224, 225, 226, 0.876953) 68.09%, rgba(224, 225, 226, 0.15625) 99.04%)
+							display: block
+
+						&::after
+							top: 40%
+							transform: rotate(225deg)
+
+		li
+			padding: 0.9375em 0
+			margin-bottom: 0.9375em
+			display: block
+			position: relative
+
+			.vert-line
+				display: block
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+
+				&::before
+					right: 2em
+					top: 0.5em
+					bottom: 0.5em
+
+			a
+				color: $blackTextColor
+				font-weight: normal
+				font-size: 1.1875em
+				display: inline-block
+				position: relative
+				padding: 0.4em 2em 0.4em 2.5em
+				width: 100%
+				transition: $trans
+
+				&::after
+					content: ""
+					position: absolute
+					right: 0.5em
+					top: 30%
+					width: 0.5em
+					height: 0.5em
+					border-bottom: 0.1em solid $accent
+					border-right: 0.1em solid $accent
+					border-bottom-right-radius: 0.2em
+					transform: rotate(45deg)
+					transition: .3s ease
+
+				&:hover, &.active
+					color: $accent
+
+					&::after
+						opacity: 1
+
+					&::before
+						display: none
+
+				svg
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					width: 1.875em
+					height: 1.875em
+
+	@media (max-width: 1023px)
+		&.isActive
+			display: block
+			visibility: visible
+		.btn-wrapper
+			width: 100%
+			margin-top: 1.875em
+
+			a
+				width: 100%
+				display: block
+
+.main-footer
+	margin-top: 80px
+
+.dashboard-main
+	margin-top: 2.5em
+
+	.cabinet-headline
+		margin-bottom: 1.5625em
+
+	&__left
+		margin-bottom: 1.5625em
+
+		.found-item
+			display: flex
+			margin-bottom: 1.5625em
+			padding: 1.875em 1.25em
+			align-items: center
+			justify-content: center
+
+			&__text
+				flex: 1 0 0
+				margin-left: 1.25em
+				padding: 0.5em 1.25em 0.5em 0
+
+			&__icon
+				max-width: 6.1875em
+				width: 100%
+
+				img
+					width: 100%
+					height: auto
+					user-select: none
+					pointer-events: none
+
+			&__title
+				font-size: 1.5625em
+				margin-bottom: 0.725em
+				line-height: 1.2
+				color: #7A90A6
+
+			&__desc
+				font-size: 1em
+				line-height: 130%
+				color: $textGray
+
+			&__action
+				align-self: center
+				padding-left: 1.25em
+				display: flex
+				flex-direction: column
+				.btn
+					border-radius: 0.25em
+					font-size: 0.9375em
+					&:first-child
+						margin-bottom: 0.625em
+	@media (max-width: 578px)
+		.found-item
+			flex-direction: column
+			position: relative
+			padding: 1.875em 1em 1.25em
+			&__icon
+				max-width: 3.75em
+				position: absolute
+				top: 1.875em
+				left: 1em
+			&__text
+				margin-left: 0
+				padding: 0.9375em 0 0
+				&::before
+					display: none
+			&__title
+				margin-left: 3em
+				margin-bottom: 1.25em
+			&__action
+				margin-top: 1.25em
+				padding-left: 0
+				width: 100%
+
+@import src/sass/media

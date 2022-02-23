@@ -1,0 +1,67 @@
+<ul class="breadcrumb">
+<li>Дэшборд</li>
+</ul>
+
+<h2 class="cabinet-headline">Состояние портфеля</h2>
+
+<app-brief-section></app-brief-section>
+
+<div class="dashboard-main" *ngIf="fundsList.length; else loader">
+<div class="row">
+  <div class="col-lg-8">
+    <div class="dashboard-main__left">
+      <h2 class="cabinet-headline mb-4">Хедж-фонды</h2>
+
+      <div class="found-item card" *ngFor="let founds of fundsList">
+        <div class="found-item__icon">
+          <img src="/assets/images/found-icon.png" alt="Found icon">
+        </div>
+        <div class="found-item__text vert-line">
+          <div class="found-item__title">{{founds.title}}</div>
+          <div class="found-item__desc">
+            Чтобы открыть возможности пополнения счета и инвестирования, вам необходимо подтвердить свою личность.
+          </div>
+        </div>
+        <div class="found-item__action">
+          <a routerLink="/cabinet/funds/{{founds.id}}" class="btn btn-gray">Подробнее</a>
+          <a class="btn btn-color">Подать заявку</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="dashboard-main__left mt-5">
+      <h2 class="cabinet-headline mb-4">Венчурные инвестиции</h2>
+
+      <div class="found-item card">
+        <div class="found-item__icon">
+          <img src="/assets/images/found-icon.png" alt="Found icon">
+        </div>
+        <div class="found-item__text vert-line">
+          <div class="found-item__title">PRE-IPO</div>
+          <div class="found-item__desc">
+            Чтобы открыть возможности пополнения счета и инвестирования, вам необходимо подтвердить свою личность.
+          </div>
+        </div>
+        <div class="found-item__action">
+          <a href="#" class="btn btn-gray">Подробнее</a>
+          <a class="btn btn-primary">Каталог идей</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="col-lg-4">
+
+    <app-news-section></app-news-section>
+
+    <app-banner-section></app-banner-section>
+
+  </div>
+</div>
+</div>
+
+<ng-template #loader>
+<app-loader></app-loader>
+</ng-template>
